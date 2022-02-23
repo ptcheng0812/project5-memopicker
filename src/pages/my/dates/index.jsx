@@ -1,8 +1,14 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { Grid, GridItem } from '@chakra-ui/react'
-import Calendar from 'react-calendar';
-import 'react-calendar/dist/Calendar.css';
+// import Calendar from 'react-calendar';
+// import 'react-calendar/dist/Calendar.css';
+// import Timeline from 'react-calendar-timeline'
+// make sure you include the timeline stylesheet or the timeline will not be styled
+// import 'react-calendar-timeline/lib/Timeline.css'
+// import moment from 'moment'
+// import FullCalendar from '@fullcalendar/react' // must go before plugins
+// import dayGridPlugin from '@fullcalendar/daygrid' // a plugin!
 
 import CompsLayout from '@/components/layouts/Layout'
 import CompsFormsMyDate from '@/components/forms/my-dates/create'
@@ -39,7 +45,6 @@ export default function PagesMyThreads() {
   console.log('choseDate>>>>>>>>', formatDate(value).toString())
   console.log('dates>>>>>>>>>>>', dates)
 
-  // console.log(value)
 
   return (<CompsLayout>
     <aside class="sidebar">
@@ -72,12 +77,15 @@ export default function PagesMyThreads() {
               date: ''
             }}
           />
-        <Calendar
-          navigationAriaLabel={"Go up"}
-          navigationAriaLive="polite"
+        {/* <Calendar
+
           onChange={onChange}
           value={value}
-        />
+        /> */}
+        {/* <FullCalendar
+        plugins={[ dayGridPlugin ]}
+        initialView="dayGridMonth"
+        /> */}
         {
           dates?.map((date) => (
             <>
