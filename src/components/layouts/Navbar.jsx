@@ -52,11 +52,6 @@ export default function CompsLayoutsNavbar() {
                   <>
                     <Nav.Link href="/categories">Category</Nav.Link>
                     <Nav.Link href="/my/profile">Profile</Nav.Link>
-                    <Nav.Link href="/my/threads">My Threads</Nav.Link>
-                    <Nav.Link href="/my/posts">My Posts</Nav.Link>
-                    <Nav.Link href="/my/notifications">My Notifications</Nav.Link>
-                    <Nav.Link href="/my/favourites">My Favourites</Nav.Link>
-                    <Nav.Link href="https://shielded-falls-80328.herokuapp.com/">Anonymous Chat</Nav.Link>
                     <a
                       className="nav-link nav-link-faded has-icon"
                       onClick={() => {
