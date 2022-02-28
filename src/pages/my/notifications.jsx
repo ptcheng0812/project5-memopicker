@@ -1,39 +1,39 @@
-import Link from 'next/link'
-import Typography from '@mui/material/Typography'
-import Avatar from '@mui/material/Avatar'
-import Grid from '@mui/material/Grid'
-import CardContent from '@mui/material/CardContent'
+// import Link from 'next/link'
+// import Typography from '@mui/material/Typography'
+// import Avatar from '@mui/material/Avatar'
+// import Grid from '@mui/material/Grid'
+// import CardContent from '@mui/material/CardContent'
 
 import CompsLayout from '@/components/layouts/Layout'
 
-import useUser from '@/_hooks/user'
-import usePublicUsers from '@/_hooks/publicUsers'
-import useNotifications from '@/_hooks/notifications'
+// import useUser from '@/_hooks/user'
+// import usePublicUsers from '@/_hooks/publicUsers'
+// import useNotifications from '@/_hooks/notifications'
 
-const ColoredLine = ({ color }) => (
-  <hr
-    style={{
-      color,
-      backgroundColor: color,
-      height: 2
-    }}
-    id="pages-my-threads-coloured-line"
-  />
-)
+// const ColoredLine = ({ color }) => (
+//   <hr
+//     style={{
+//       color,
+//       backgroundColor: color,
+//       height: 2
+//     }}
+//     id="pages-my-threads-coloured-line"
+//   />
+// )
 
 export default function PagesMyNotifications() {
-  const { currentUser } = useUser()
-  const { users } = usePublicUsers()
-  const { myNotifications, destroyNotification } = useNotifications()
+  // const { currentUser } = useUser()
+  // const { users } = usePublicUsers()
+  // const { myNotifications, destroyNotification } = useNotifications()
 
-  console.log('>>>>>>>currentUser', currentUser)
-  console.log('>>>>>>>>>>publicUsers', users)
-  console.log('>>>>>>>>myNotifications', myNotifications)
+  // console.log('>>>>>>>currentUser', currentUser)
+  // console.log('>>>>>>>>>>publicUsers', users)
+  // console.log('>>>>>>>>myNotifications', myNotifications)
 
   return (
     <CompsLayout>
       <div id="pages-my-notifications" className="text-center">
-
+{/*
         <Grid id="pages-my-notifications-main-grid">
           <Grid item lg={4} id="pages-my-notifications-avatar-grid">
             <div className="border rounded d-flex justify-content-center" id="pages-my-notifications-avatar-grid-wrap">
@@ -81,7 +81,7 @@ export default function PagesMyNotifications() {
         }
             </div>
           </Grid>
-        </Grid>
+        </Grid> */}
       </div>
     </CompsLayout>
   )

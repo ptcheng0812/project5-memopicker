@@ -1,41 +1,41 @@
-import Link from 'next/link'
-import Avatar from '@mui/material/Avatar'
-import Grid from '@mui/material/Grid'
-import Typography from '@mui/material/Typography'
-import CardContent from '@mui/material/CardContent'
-import Button from '@mui/material/Button'
+// import Link from 'next/link'
+// import Avatar from '@mui/material/Avatar'
+// import Grid from '@mui/material/Grid'
+// import Typography from '@mui/material/Typography'
+// import CardContent from '@mui/material/CardContent'
+// import Button from '@mui/material/Button'
 
-import { useState } from 'react'
-import { useRouter } from 'next/router'
+// import { useState } from 'react'
+// import { useRouter } from 'next/router'
 
 import CompsLayout from '@/components/layouts/Layout'
 import CompsModalsNotificationsCreate from '@/components/modals/notifications/create'
-import usePublicUser from '@/_hooks/publicUser'
-import useNotifications from '@/_hooks/notifications'
+// import usePublicUser from '@/_hooks/publicUser'
+// import useNotifications from '@/_hooks/notifications'
 
-const ColoredLine = ({ color }) => (
-  <hr
-    style={{
-      color,
-      backgroundColor: color,
-      height: 2
-    }}
-    className="coloured-line"
-  />
-)
+// const ColoredLine = ({ color }) => (
+//   <hr
+//     style={{
+//       color,
+//       backgroundColor: color,
+//       height: 2
+//     }}
+//     className="coloured-line"
+//   />
+// )
 
 function PagesPublicUser() {
-  const [openNotificationsCreate, setOpenNotificationsCreate] = useState(false)
-  const { query: { userId } } = useRouter()
+  // const [openNotificationsCreate, setOpenNotificationsCreate] = useState(false)
+  // const { query: { userId } } = useRouter()
 
-  const { user } = usePublicUser(userId)
-  const { createNotification } = useNotifications()
+  // const { user } = usePublicUser(userId)
+  // const { createNotification } = useNotifications()
 
-  console.log('user>>>>>>>>>>>', user)
+  // console.log('user>>>>>>>>>>>', user)
 
   return (
     <CompsLayout>
-      <div id="pages-public-user">
+      {/* <div id="pages-public-user">
         <h1>User Page</h1>
         <Grid id="pages-user-main-grid">
           <Grid item xs={4} id="pages-user-avatar-grid" className="border rounded">
@@ -76,7 +76,7 @@ function PagesPublicUser() {
           </Grid>
           <Grid item xs={6} />
         </Grid>
-      </div>
+      </div> */}
 
       <CompsModalsNotificationsCreate
         show={openNotificationsCreate}

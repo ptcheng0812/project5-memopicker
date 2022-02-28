@@ -1,54 +1,54 @@
 /* eslint-disable no-shadow */
-import { useState } from 'react'
-import Link from 'next/link'
-import Typography from '@mui/material/Typography'
-import Avatar from '@mui/material/Avatar'
-import Grid from '@mui/material/Grid'
-import CardContent from '@mui/material/CardContent'
+// import { useState } from 'react'
+// import Link from 'next/link'
+// import Typography from '@mui/material/Typography'
+// import Avatar from '@mui/material/Avatar'
+// import Grid from '@mui/material/Grid'
+// import CardContent from '@mui/material/CardContent'
 
 import CompsLayout from '@/components/layouts/Layout'
 
-import useUser from '@/_hooks/user'
-import usePublicUsers from '@/_hooks/publicUsers'
-import useFavourites from '@/_hooks/favourites'
-import useMyFavourites from '@/_hooks/myFavourites'
-import useAllThreads from '@/_hooks/allThreads'
-import usePosts from '@/_hooks/posts'
+// import useUser from '@/_hooks/user'
+// import usePublicUsers from '@/_hooks/publicUsers'
+// import useFavourites from '@/_hooks/favourites'
+// import useMyFavourites from '@/_hooks/myFavourites'
+// import useAllThreads from '@/_hooks/allThreads'
+// import usePosts from '@/_hooks/posts'
 
-const ColoredLine = ({ color }) => (
-  <hr
-    style={{
-      color,
-      backgroundColor: color,
-      height: 2
-    }}
-    id="pages-my-threads-coloured-line"
-  />
-)
+// const ColoredLine = ({ color }) => (
+//   <hr
+//     style={{
+//       color,
+//       backgroundColor: color,
+//       height: 2
+//     }}
+//     id="pages-my-threads-coloured-line"
+//   />
+// )
 
 export default function PagesMyFavourites() {
-  const [page, setPage] = useState(1)
+  // const [page, setPage] = useState(1)
 
-  const { currentUser } = useUser()
-  const { users } = usePublicUsers()
-  const { threads } = useAllThreads()
-  const { destroyFavourite } = useFavourites()
-  const { favourites } = useMyFavourites(page)
-  const { posts } = usePosts()
-  const threadsIds = threads?.map((thread) => thread.id)
+  // const { currentUser } = useUser()
+  // const { users } = usePublicUsers()
+  // const { threads } = useAllThreads()
+  // const { destroyFavourite } = useFavourites()
+  // const { favourites } = useMyFavourites(page)
+  // const { posts } = usePosts()
+  // const threadsIds = threads?.map((thread) => thread.id)
 
-  console.log('>>>>>>>currentUser', currentUser)
-  console.log('>>>>>>>>users', users)
-  console.log('>>>>>>>favourites', favourites)
-  console.log('>>>>>>>posts', posts)
-  console.log('>>>>>>>threads', threads)
-  console.log('>>>>>>>threadsIds', threadsIds)
+  // console.log('>>>>>>>currentUser', currentUser)
+  // console.log('>>>>>>>>users', users)
+  // console.log('>>>>>>>favourites', favourites)
+  // console.log('>>>>>>>posts', posts)
+  // console.log('>>>>>>>threads', threads)
+  // console.log('>>>>>>>threadsIds', threadsIds)
 
   return (
     <CompsLayout>
       <div id="pages-my-favourites" className="text-center">
 
-        <Grid id="pages-my-favourites-main-grid">
+        {/* <Grid id="pages-my-favourites-main-grid">
           <Grid item lg={4} id="pages-my-favourites-avatar-grid">
             <div className="border rounded d-flex justify-content-center" id="pages-my-favourites-avatar-grid-wrap">
               <div id="pages-my-favourites-avatar">
@@ -112,7 +112,7 @@ export default function PagesMyFavourites() {
               }
             </div>
           </Grid>
-        </Grid>
+        </Grid> */}
         <div id="page-my-favourites-pagination-btn" className="d-flex justify-content-around">
           {
             page > 1 && <button type="button" className="btn btn-info btn-spacing" id="page-my-favourites-pagination-btn-btn" onClick={() => setPage(page - 1)}>Previous</button>
