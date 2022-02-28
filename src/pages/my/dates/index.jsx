@@ -36,12 +36,13 @@ export default function PagesMyThreads() {
     var yy = x?.getFullYear()
     return yy +"-" + finalMM +"-" + finalDD
   }
-  console.log('choseDate>>>>>>>>', formatDate(value).toString())
-  console.log('dates>>>>>>>>>>>', dates)
+  // console.log('choseDate>>>>>>>>', formatDate(value).toString())
+  // console.log('dates>>>>>>>>>>>', dates)
 
   // console.log(value)
 
   return (<CompsLayout>
+    <div id="page-my-dates-index">
     <aside className="sidebar">
         <nav className="nav">
           <ul>
@@ -52,7 +53,6 @@ export default function PagesMyThreads() {
           </ul>
         </nav>
     </aside>
-    <div id="page-my-dates-index">
       <Grid
         h='200px'
         templateRows='repeat(2, 1fr)'
@@ -72,12 +72,14 @@ export default function PagesMyThreads() {
               date: ''
             }}
           />
-        <Calendar
-          navigationAriaLabel={"Go up"}
-          navigationAriaLive="polite"
-          onChange={onChange}
-          value={value}
-        />
+        <div id="page-dates-index-calendar">
+          <Calendar
+            navigationAriaLabel={"Go up"}
+            navigationAriaLive="polite"
+            onChange={onChange}
+            value={value}
+          />
+        </div>
         {
           dates?.map((date) => (
             <>

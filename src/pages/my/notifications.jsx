@@ -34,7 +34,7 @@ export default function PagesMyNotifications() {
     <CompsLayout>
       <div id="pages-my-notifications" className="text-center">
 
-        <Grid container spacing={2} rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }} id="pages-my-notifications-main-grid">
+        <Grid id="pages-my-notifications-main-grid">
           <Grid item lg={4} id="pages-my-notifications-avatar-grid">
             <div className="border rounded d-flex justify-content-center" id="pages-my-notifications-avatar-grid-wrap">
               <div id="pages-my-notifications-avatar">

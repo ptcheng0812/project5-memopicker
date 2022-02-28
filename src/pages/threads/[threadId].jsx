@@ -91,7 +91,7 @@ export default function PagesThreadShow() {
       </div>
 
       <main id="thread-main-group" className="thread-main-group d-flex justify-content-center">
-        <Grid container spacing={2} rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 12 }} id="pages-my-favourites-main-grid">
+        <Grid id="pages-my-favourites-main-grid">
           <Grid item lg={4} id="pages-my-favourites-avatar-grid">
             <div className="inner-sidebar-body p-0">
               <div className="p-3 h-100" data-simplebar="init">

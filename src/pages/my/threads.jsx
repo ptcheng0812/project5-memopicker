@@ -43,7 +43,7 @@ export default function PagesMyThreads() {
     <CompsLayout>
       <div id="pages-my-threads" className="text-center">
         {/* <h1>My Threads</h1> */}
-        <Grid container spacing={2} rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }} id="pages-my-thread-main-grid">
+        <Grid id="pages-my-thread-main-grid">
           <Grid item lg={4} id="pages-my-thread-avatar-grid">
             <div className="border rounded d-flex justify-content-center" id="pages-my-thread-avatar-grid-wrap">
               <div id="pages-my-thread-avatar">

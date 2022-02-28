@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { useState } from 'react'
 import Typography from '@mui/material/Typography'
 import CompsLayoutsNavbar from '@/components/layouts/Navbar'
 import {
@@ -11,7 +12,11 @@ import {
   useBreakpointValue,
 } from '@chakra-ui/react';
 
+import CompsModalsHowShow from '@/components/modals/how/how-show'
+
 export default function PagesHome() {
+  const [openHow, setOpenHow] = useState(false)
+
   return (
     <div id="pages-home">
       {/* <CompsLayoutsNavbar />
@@ -40,31 +45,39 @@ export default function PagesHome() {
                 position: 'absolute',
                 bottom: 1,
                 left: 0,
-                bg: 'blue.400',
+                bg: 'purple.400',
                 zIndex: -1,
               }}>
               Mark Your Tasks
             </Text>
             <br />{' '}
-            <Text color={'blue.400'} as={'span'}>
+            <Text color={'purple.400'} as={'span'}>
               MemoPicker
             </Text>{' '}
           </Heading>
+          <Image
+            src={'https://i0.wp.com/www.cssscript.com/wp-content/uploads/2019/02/Simple-Datepicker-Calendar-In-Vanilla-JavaScript.png?fit=486%2C504&ssl=1'}
+          />
           <Text fontSize={{ base: 'md', lg: 'lg' }} color={'gray.500'}>
-            The project board is an exclusive resource for contract work. It's
-            perfect for freelancers, agencies, and moonlighters.
+            The MemoPicker is an exclusive resource for tasks management. It's
+            perfect for freelancers, agencies, and moonlighters for scheduling their daily tasks.
           </Text>
           <Stack direction={{ base: 'column', md: 'row' }} spacing={4}>
             <Button
               rounded={'full'}
-              bg={'blue.400'}
+              bg={'purple.400'}
               color={'white'}
               _hover={{
-                bg: 'blue.500',
+                bg: 'purple.500',
               }}>
-              Create Project
+              <a href="/my/dates">Calendar</a>
             </Button>
-            <Button rounded={'full'}>How It Works</Button>
+            <Button
+              rounded={'full'}
+              onClick={() => {
+                setOpenHow(true)
+              }}
+            >How It Works</Button>
           </Stack>
         </Stack>
       </Flex>
@@ -78,6 +91,11 @@ export default function PagesHome() {
         />
       </Flex>
     </Stack>
+
+    <CompsModalsHowShow
+        show={openHow}
+        handleClose={() => setOpenHow(false)}
+      />
     </div>
   )
 }

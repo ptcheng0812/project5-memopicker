@@ -18,6 +18,7 @@
 
 #pages-home {
   position: relative;
+  background-color: #000000;
 }
 
 #pages-home-text {
@@ -40,27 +41,27 @@
 
 #pages-home-background-btn {
   &.dark {
-    --background: #2F3545;
+    --background: #824085;
     --shadow: 0 2px 8px -1px #{rgba(#151924, .32)};
     --shadow-hover: 0 4px 20px -2px #{rgba(#151924, .5)};
   }
 
   &.white {
     --background: #fff;
-    --text: #275efe;
+    --text: #9627fe;
     --shadow: 0 2px 8px -1px #{rgba(#121621, .04)};
     --shadow-hover: 0 4px 20px -2px #{rgba(#121621, .12)};
   }
 }
 
 #pages-home-background-btn {
-  --background: #275efe;
+  --background: #992cff;
   --text: #fff;
   --font-size: 16px;
   --duration: .5s;
   --move-hover: -4px;
-  --shadow: 0 2px 8px -1px #{rgba(#275efe, .32)};
-  --shadow-hover: 0 4px 20px -2px #{rgba(#275efe, .5)};
+  --shadow: 0 2px 8px -1px #{rgba(#9627fe, .32)};
+  --shadow-hover: 0 4px 20px -2px #{rgba(#ba27fe, .5)};
   padding: 16px 32px;
   font-family: sans-serif;
   font-weight: 500;

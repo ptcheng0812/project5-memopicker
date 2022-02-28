@@ -37,7 +37,7 @@ function PagesPublicUser() {
     <CompsLayout>
       <div id="pages-public-user">
         <h1>User Page</h1>
-        <Grid container spacing={2} rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }} id="pages-user-main-grid">
+        <Grid id="pages-user-main-grid">
           <Grid item xs={4} id="pages-user-avatar-grid" className="border rounded">
             <div>
               <Avatar src={user?.avatar} alt="avatar" sx={{ width: 200, height: 200 }} id="pages-user-avatar" />
@@ -65,7 +65,7 @@ function PagesPublicUser() {
             </Typography>
             <h6>{user?.introduction}</h6>
           </Grid>
-          <Grid item xs={4} spacing={2} className="in-pages-nav border rounded">
+          <Grid className="in-pages-nav border rounded">
             <CardContent className="d-flex flex-column">
               <Link href="/my/profile">Profile</Link>
               <Link href="/my/threads">My Threads</Link>

@@ -49,7 +49,7 @@ export default function PagesMyPosts() {
     <CompsLayout>
       <div id="pages-my-posts" className="text-center">
         {/* <h1>My Posts</h1> */}
-        <Grid container spacing={2} rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }} id="pages-my-posts-main-grid">
+        <Grid id="pages-my-posts-main-grid">
           <Grid item lg={4} id="pages-my-posts-avatar-grid">
             <div className="border rounded d-flex justify-content-center" id="pages-my-posts-avatar-grid-wrap">
               <div id="pages-my-posts-avatar">

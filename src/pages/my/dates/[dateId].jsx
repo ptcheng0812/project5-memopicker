@@ -3,6 +3,7 @@ import { useRouter } from 'next/router'
 import { Grid, GridItem } from '@chakra-ui/react'
 
 import useDate from '@/_hooks/myDate'
+import useUser from '@/_hooks/user'
 
 import CompsLayout from '@/components/layouts/Layout'
 import CompsModalsTasksCreate from '@/components/modals/my-tasks/create'
@@ -10,13 +11,15 @@ import CompsModalsTasksUpdate from '@/components/modals/my-tasks/update'
 
 export default function PagesThreadShow() {
   const { query: { dateId } } = useRouter()
-  const { date, createTasks, updateTasks } = useDate(dateId)
+  const { date, createTasks, updateTasks, destroyTasks } = useDate(dateId)
+  const { currentUser } = useUser()
 
   const [openTasksCreate, setOpenTasksCreate] = useState(false)
   const [openTaskUpdate, setOpenTaskUpdate] = useState(false)
   const [ selectedTask, setSelectedTasks] = useState({})
 
   console.log("date>>>>>>>>>>", date)
+  console.log('currentUser>>>>', currentUser)
 
   return (
     <CompsLayout>
@@ -61,9 +64,10 @@ export default function PagesThreadShow() {
               date?.Tasks?.map((task) => (
                 <>
                   <div class="card">
-                    <div class="d-flex justify-content-between">
-                      {task?.duty}
-                      <button
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div>{task?.duty}</div>
+                      <div>
+                        <button
                         className="btn btn-outline-primary btn-lg border-0"
                         id="pages-my-date-show-edit-btn"
                         type="button"
@@ -71,7 +75,16 @@ export default function PagesThreadShow() {
                           setOpenTaskUpdate(true)
                           setSelectedTasks(task)
                         }}
-                      ><i className="fas fa-edit" /></button>
+                        ><i className="fas fa-edit" /></button>
+                        <button
+                          className="btn btn-danger btn-sm"
+                          type="button"
+                          onClick={() => {
+                          destroyTasks(task)
+                        }}
+                        ><i className="fas fa-trash-alt" /></button>
+                      </div>
+
                     </div>
                   </div>
                 </>

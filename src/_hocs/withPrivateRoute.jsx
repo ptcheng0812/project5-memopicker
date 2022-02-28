@@ -8,13 +8,13 @@ import CompsLoading from '@/components/Loading'
 export default function withPrivateRoute(WrappedComponent) {
   return function PrivateRoute(props) {
     const router = useRouter()
-    const { user, isLoading } = useUser()
+    const { currentUser, isLoading } = useUser()
 
     useEffect(() => {
-      if (!isLoading && !user) router.push('/')
+      if (!isLoading && !currentUser) router.push('/')
     }, [isLoading])
 
-    if (isLoading || !user) return <CompsLoading />
+    if (isLoading || !currentUser) return <CompsLoading />
 
     return <WrappedComponent {...props} />
   }
